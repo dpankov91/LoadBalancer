@@ -1,5 +1,0 @@
-C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancer\obj\Debug\net6.0\LoadBalancer.csproj.AssemblyReference.cache
-C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancer\obj\Debug\net6.0\LoadBalancer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancer\obj\Debug\net6.0\LoadBalancer.AssemblyInfoInputs.cache
-C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancer\obj\Debug\net6.0\LoadBalancer.AssemblyInfo.cs
-C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancer\obj\Debug\net6.0\LoadBalancer.csproj.CoreCompileInputs.cache

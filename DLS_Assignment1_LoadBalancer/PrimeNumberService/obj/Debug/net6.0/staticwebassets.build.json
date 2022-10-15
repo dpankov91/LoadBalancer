@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tB1T/ftHrSWmkyZu9MlgNoBaPX/jCvtLVYt1hFXdbSU=",
+  "Source": "PrimeNumberService",
+  "BasePath": "_content/PrimeNumberService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

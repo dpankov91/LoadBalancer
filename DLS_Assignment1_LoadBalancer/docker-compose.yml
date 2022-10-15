@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  loadbalancerapi:
+    image: ${DOCKER_REGISTRY-}loadbalancerapi
+    build:
+      context: .
+      dockerfile: LoadBalancerApi/Dockerfile
+
+  primenumberservice:
+    image: ${DOCKER_REGISTRY-}primenumberservice
+    build:
+      context: .
+      dockerfile: PrimeNumberService/Dockerfile
+
+
+  webapp:
+    image: ${DOCKER_REGISTRY-}webapp
+    build:
+      context: .
+      dockerfile: WebApp/Dockerfile
+

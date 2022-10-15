@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{5914D7C9-5098-467E-9E35-FACFDCFA5705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{5914D7C9-5098-467E-9E35-FACFDCFA5705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumberService", "PrimeNumberService\PrimeNumberService.csproj", "{A2EEDDB0-25BC-4449-9619-D17F7FB04E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimeNumberService", "PrimeNumberService\PrimeNumberService.csproj", "{A2EEDDB0-25BC-4449-9619-D17F7FB04E6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadBalancerApi", "LoadBalancerApi\LoadBalancerApi.csproj", "{F5A1C3B2-FA1C-4961-9D89-61A38491DE37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadBalancerApi", "LoadBalancerApi\LoadBalancerApi.csproj", "{F5A1C3B2-FA1C-4961-9D89-61A38491DE37}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C4EF1AAA-80B5-4F4A-B60C-D228064ED87D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedModels", "SharedModels\SharedModels.csproj", "{331C7810-CEF3-4D97-BB72-BB990C19CAA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{F5A1C3B2-FA1C-4961-9D89-61A38491DE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5A1C3B2-FA1C-4961-9D89-61A38491DE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5A1C3B2-FA1C-4961-9D89-61A38491DE37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4EF1AAA-80B5-4F4A-B60C-D228064ED87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4EF1AAA-80B5-4F4A-B60C-D228064ED87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4EF1AAA-80B5-4F4A-B60C-D228064ED87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4EF1AAA-80B5-4F4A-B60C-D228064ED87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{331C7810-CEF3-4D97-BB72-BB990C19CAA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{331C7810-CEF3-4D97-BB72-BB990C19CAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{331C7810-CEF3-4D97-BB72-BB990C19CAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{331C7810-CEF3-4D97-BB72-BB990C19CAA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

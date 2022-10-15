@@ -1,5 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
+string primeNumbersServiceBaseUrl = "http://primenumberservice/api/primenumbers";
+
 // Add services to the container.
 
 builder.Services.AddControllers();

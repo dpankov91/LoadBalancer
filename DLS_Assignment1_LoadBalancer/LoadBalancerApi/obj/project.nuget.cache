@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "dFgvxPB/+yU00LV8qJJSz88JXYvJar5LhYCvOe8I29ISUnSU+BHCRKAQiRBWgyPa5Hz5ciQ9w9cFbGSyynJCbw==",
+  "dgSpecHash": "1zjw9e1s1hE1IsTi161L/v5iRuC42xqFqBosKsm39QW2xLiY7N9tZxiDQvS6Gem+x8S0HMdORD37NMoyiE23JA==",
   "success": true,
   "projectFilePath": "C:\\Users\\dpank\\Documents\\GitHub\\LoadBalancer\\DLS_Assignment1_LoadBalancer\\LoadBalancerApi\\LoadBalancerApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dpank\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\dpank\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\dpank\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
+    "C:\\Users\\dpank\\.nuget\\packages\\restsharp\\108.0.2\\restsharp.108.0.2.nupkg.sha512",
     "C:\\Users\\dpank\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\dpank\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\dpank\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

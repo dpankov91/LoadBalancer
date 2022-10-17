@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PrimeNumberService.Service;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,36 +9,25 @@ namespace PrimeNumberService.Controllers
     [ApiController]
     public class PrimeNumbersController : ControllerBase
     {
-        // GET: api/<PrimeNumbersController>
+        private readonly IPrimeNumbersService _primeNumbersService;
+
+        public PrimeNumbersController(IPrimeNumbersService primeNumbersService)
+        {
+            _primeNumbersService = primeNumbersService;
+        }
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        [Route("GetIsPrime")]
+        public bool GetIsPrime(string number)
         {
-            return new string[] { "value1", "value2" };
+            return _primeNumbersService.isPrime(number);
         }
 
-        // GET api/<PrimeNumbersController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        [Route("GetCountPrimes")]
+        public string GetCountPrimes(string start, string end)
         {
-            return "value";
-        }
-
-        // POST api/<PrimeNumbersController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<PrimeNumbersController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<PrimeNumbersController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return _primeNumbersService.countPrimes(start, end);
         }
     }
 }

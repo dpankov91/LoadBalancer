@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestSharp;
 using SharedModels;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,36 +10,32 @@ namespace WebApp.Controllers
     [ApiController]
     public class WebAppController : ControllerBase
     {
-        // GET: api/<WebAppController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        [Route("GetIsPrime")]
+        public async Task<bool> GetIsPrime(string number)
         {
-            return new string[] { "value1", "value2" };
+            RestClient c = new RestClient("http://192.168.160.4/api/loadbalancer/GetIsPrime");
+
+            var request = new RestRequest();
+            request.AddParameter("number", number);
+            var response = c.GetAsync<bool>(request);
+
+            response.Wait();
+            return response.Result;
         }
 
-        // GET api/<WebAppController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        [Route("GetCountPrimes")]
+        public async Task<string> GetCountPrimes(string start, string end)
         {
-            return "value";
-        }
+            RestClient c = new RestClient("https://localhost:44304/api/loadbalancer/GetCountPrimes");
 
-        // POST api/<WebAppController>
-        [HttpPost]
-        public void Post([FromBody] PrimeNumbersDTO primeNumbersDTO)
-        {
-        }
+            var request = new RestRequest();
+            request.AddParameter("start", start);
+            request.AddParameter("end", end);
+            var response = await c.ExecuteAsync<string>(request);
 
-        // PUT api/<WebAppController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<WebAppController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return response.Data;
         }
     }
 }

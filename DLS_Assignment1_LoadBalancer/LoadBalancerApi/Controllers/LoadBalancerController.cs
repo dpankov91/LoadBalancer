@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestSharp;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,36 +9,76 @@ namespace LoadBalancerApi.Controllers
     [ApiController]
     public class LoadBalancerController : ControllerBase
     {
-        // GET: api/<LoadBalancerController>
+        public static int requestCount = 0;
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        [Route("GetIsPrime")]
+        public Task<bool> GetIsPrime(string number)
         {
-            return new string[] { "value1", "value2" };
+            return ExecutingIsPrime(number);
         }
 
-        // GET api/<LoadBalancerController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        [Route("GetCountPrimes")]
+        public Task<string> GetCountPrimes(string start, string end)
         {
-            return "value";
+            return ExecutingCountPrimes(start, end);
         }
 
-        // POST api/<LoadBalancerController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<bool> ExecutingIsPrime(string number)
         {
+            requestCount++;
+
+            if (requestCount % 2 != 0)
+            {
+                RestClient c = new RestClient("http://192.168.160.2/api/primenumbers/GetIsPrime");
+
+                var request = new RestRequest();
+                request.AddParameter("number", number);
+                var response = c.GetAsync<bool>(request);
+
+                response.Wait();
+                return response.Result;
+            }
+            else
+            {
+                RestClient c = new RestClient("http://192.168.160.2/api/primenumbers/GetIsPrime");
+
+                var request = new RestRequest();
+                request.AddParameter("number", "120");
+                var response = c.GetAsync<bool>(request);
+
+                response.Wait();
+                return response.Result;
+            }
         }
 
-        // PUT api/<LoadBalancerController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<string> ExecutingCountPrimes(string start, string end)
         {
-        }
+            requestCount++;
 
-        // DELETE api/<LoadBalancerController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            if (requestCount % 2 != 0)
+            {
+                RestClient c = new RestClient("http://192.168.128.3/api/loadbalancer/GetIsPrime");
+
+                var request = new RestRequest();
+                request.AddParameter("number", "120");
+                var response = c.GetAsync<string>(request);
+
+                response.Wait();
+                return response.Result;
+            }
+            else
+            {
+                RestClient c = new RestClient("http://192.168.128.3/api/loadbalancer/GetIsPrime");
+
+                var request = new RestRequest();
+                request.AddParameter("number", "120");
+                var response = c.GetAsync<string>(request);
+
+                response.Wait();
+                return response.Result;
+            }
         }
     }
 }

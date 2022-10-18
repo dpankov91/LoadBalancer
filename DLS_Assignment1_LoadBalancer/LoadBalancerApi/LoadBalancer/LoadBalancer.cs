@@ -1,22 +1,30 @@
-﻿using LoadBalancerApi.LoadBalancerStrategy;
+﻿using LoadBalancerApi.Data.Repo;
+using LoadBalancerApi.LoadBalancerStrategy;
+using LoadBalancerApi.Models;
 
 namespace LoadBalancerApi.LoadBalancer
 {
     public class LoadBalancer : ILoadBalancer
     {
-        public List<string> GetAllServices()
+        private readonly IRepository<ApiService> _apiServicesRepo;
+
+        public LoadBalancer(IRepository<ApiService> ApiServicesRepo)
         {
-            throw new NotImplementedException();
+            _apiServicesRepo = ApiServicesRepo;
+        }
+        public List<ApiService> GetAllServices()
+        {
+            return _apiServicesRepo.GetAll().ToList();
         }
 
-        public int AddService(string url)
+        public ApiService AddService(ApiService service)
         {
-            throw new NotImplementedException();
+            return _apiServicesRepo.Add(service); 
         }
 
-        public int RemoveService(int id)
+        public void RemoveService(int id)
         {
-            throw new NotImplementedException();
+            _apiServicesRepo.Remove(id);
         }
 
         public ILoadBalancerStrategy GetActiveStrategy()
@@ -29,7 +37,7 @@ namespace LoadBalancerApi.LoadBalancer
             throw new NotImplementedException();
         }
 
-        public string NextService()
+        public ApiService NextService()
         {
             throw new NotImplementedException();
         }

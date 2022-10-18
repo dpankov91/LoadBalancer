@@ -108,16 +108,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "SharedModels/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/SharedModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SharedModels.dll": {}
-        }
       }
     }
   },
@@ -344,18 +334,12 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
-    },
-    "SharedModels/1.0.0": {
-      "type": "project",
-      "path": "../SharedModels/SharedModels.csproj",
-      "msbuildProject": "../SharedModels/SharedModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.17.0",
       "RestSharp >= 108.0.2",
-      "SharedModels >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -393,11 +377,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\dpank\\Documents\\GitHub\\LoadBalancer\\DLS_Assignment1_LoadBalancer\\SharedModels\\SharedModels.csproj": {
-              "projectPath": "C:\\Users\\dpank\\Documents\\GitHub\\LoadBalancer\\DLS_Assignment1_LoadBalancer\\SharedModels\\SharedModels.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

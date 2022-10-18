@@ -18,8 +18,4 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SharedModels\SharedModels.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -46,6 +46,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.17.0, )"
@@ -53,6 +61,10 @@
             "RestSharp": {
               "target": "Package",
               "version": "[108.0.2, )"
+            },
+            "Stenn.EntityFrameworkCore.InMemory.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.4.40, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

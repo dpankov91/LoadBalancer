@@ -1,8 +1,10 @@
-﻿namespace LoadBalancerApi.LoadBalancerStrategy
+﻿using LoadBalancerApi.Models;
+
+namespace LoadBalancerApi.LoadBalancerStrategy
 {
     public class LoadBalancerStrategy : ILoadBalancerStrategy
     {
-        public string NextService(List<string> services)
+        public ApiService NextService(List<ApiService> services)
         {
             throw new NotImplementedException();
         }

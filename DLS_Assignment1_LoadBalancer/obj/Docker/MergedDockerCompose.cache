@@ -1,3 +1,4 @@
+name: dockercompose9183006254282214546
 services:
   loadbalancerapi:
     build:
@@ -6,8 +7,12 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     image: loadbalancerapi
+    networks:
+      default: null
     ports:
-    - target: 80
+    - mode: ingress
+      target: 80
+      protocol: tcp
   primenumberservice:
     build:
       context: C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer
@@ -15,8 +20,25 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     image: primenumberservice
+    networks:
+      default: null
     ports:
-    - target: 80
+    - mode: ingress
+      target: 80
+      protocol: tcp
+  primenumberservice2:
+    build:
+      context: C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer
+      dockerfile: PrimeNumberService/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: primenumberservice
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
   webapp:
     build:
       context: C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer
@@ -24,6 +46,12 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     image: webapp
+    networks:
+      default: null
     ports:
-    - target: 80
-version: '3.4'
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose9183006254282214546_default

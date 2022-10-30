@@ -13,6 +13,12 @@ services:
     ports:
       - "80"
 
+  primenumberservice2:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
 
   webapp:
     environment:

@@ -1,7 +1,9 @@
-﻿namespace LoadBalancerApi.LoadBalancerStrategy
+﻿using LoadBalancerApi.Models;
+
+namespace LoadBalancerApi.LoadBalancerStrategy
 {
     public interface ILoadBalancerStrategy
     {
-        public string NextService(List<string> services);
+        public ApiService NextService(List<ApiService> services);
     }
 }

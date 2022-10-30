@@ -17,13 +17,10 @@ namespace LoadBalancerApi.Data.DbInitializer
 
             List<ApiService> apiServices = new List<ApiService>
             {
-                new ApiService {  Name = "WebAppService",
-                                Url = ""},
-
-                new ApiService {  Name = "LoadBalancerService",
-                                Url = ""},
-
                 new ApiService {  Name = "PrimeNumberService",
+                                Url = ""},
+
+                new ApiService {  Name = "PrimeNumberService_1",
                                 Url = ""}
             };
 

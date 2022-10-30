@@ -1,4 +1,5 @@
-﻿using LoadBalancerApi.Data.Repo;
+﻿using LoadBalancerApi.Data;
+using LoadBalancerApi.Data.Repo;
 using LoadBalancerApi.LoadBalancerStrategy;
 using LoadBalancerApi.Models;
 
@@ -7,10 +8,12 @@ namespace LoadBalancerApi.LoadBalancer
     public class LoadBalancer : ILoadBalancer
     {
         private readonly IRepository<ApiService> _apiServicesRepo;
+        private readonly ApiServiceContext db;
 
-        public LoadBalancer(IRepository<ApiService> ApiServicesRepo)
+        public LoadBalancer(IRepository<ApiService> ApiServicesRepo, ApiServiceContext context)
         {
             _apiServicesRepo = ApiServicesRepo;
+            db = context;
         }
         public List<ApiService> GetAllServices()
         {
@@ -39,7 +42,10 @@ namespace LoadBalancerApi.LoadBalancer
 
         public ApiService NextService()
         {
-            throw new NotImplementedException();
+            var allServices = GetAllServices();
+
+            return allServices[0];
         }
+            
     }
 }

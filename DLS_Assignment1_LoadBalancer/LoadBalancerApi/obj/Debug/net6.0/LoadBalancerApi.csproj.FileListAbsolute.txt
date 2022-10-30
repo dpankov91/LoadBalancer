@@ -26,3 +26,14 @@ C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBa
 C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\obj\Debug\net6.0\LoadBalancerApi.genruntimeconfig.cache
 C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\obj\Debug\net6.0\ref\LoadBalancerApi.dll
 C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\RestSharp.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Stenn.EntityFrameworkCore.Extensions.DependencyInjection.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Stenn.EntityFrameworkCore.InMemory.Extensions.DependencyInjection.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Stenn.EntityFrameworkCore.Relational.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Stenn.EntityFrameworkCore.StaticMigrations.dll
+C:\Users\dpank\Documents\GitHub\LoadBalancer\DLS_Assignment1_LoadBalancer\LoadBalancerApi\bin\Debug\net6.0\Stenn.StaticMigrations.dll

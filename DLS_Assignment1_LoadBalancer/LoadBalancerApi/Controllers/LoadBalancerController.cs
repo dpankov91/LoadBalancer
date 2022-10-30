@@ -31,7 +31,7 @@ namespace LoadBalancerApi.Controllers
 
             if (requestCount % 2 != 0)
             {
-                RestClient c = new RestClient("http://192.168.160.2/api/primenumbers/GetIsPrime");
+                RestClient c = new RestClient("http://192.168.160.3/api/primenumbers/GetIsPrime");
 
                 var request = new RestRequest();
                 request.AddParameter("number", number);
@@ -42,7 +42,7 @@ namespace LoadBalancerApi.Controllers
             }
             else
             {
-                RestClient c = new RestClient("http://192.168.160.2/api/primenumbers/GetIsPrime");
+                RestClient c = new RestClient("http://192.168.160.5/api/primenumbers/GetIsPrime");
 
                 var request = new RestRequest();
                 request.AddParameter("number", "120");
@@ -59,10 +59,11 @@ namespace LoadBalancerApi.Controllers
 
             if (requestCount % 2 != 0)
             {
-                RestClient c = new RestClient("http://192.168.128.3/api/loadbalancer/GetIsPrime");
+                RestClient c = new RestClient("http://192.168.160.3/api/loadbalancer/GetCountPrimes");
 
                 var request = new RestRequest();
-                request.AddParameter("number", "120");
+                request.AddParameter("start", start);
+                request.AddParameter("end", end);
                 var response = c.GetAsync<string>(request);
 
                 response.Wait();
@@ -70,10 +71,11 @@ namespace LoadBalancerApi.Controllers
             }
             else
             {
-                RestClient c = new RestClient("http://192.168.128.3/api/loadbalancer/GetIsPrime");
+                RestClient c = new RestClient("http://192.168.160.5/api/loadbalancer/GetCountPrimes");
 
                 var request = new RestRequest();
-                request.AddParameter("number", "120");
+                request.AddParameter("start", start);
+                request.AddParameter("end", end);
                 var response = c.GetAsync<string>(request);
 
                 response.Wait();
